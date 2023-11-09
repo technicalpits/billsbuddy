@@ -1,0 +1,24 @@
+﻿@model List<Users>
+
+<h1>User List</h1>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                email
+            </th>
+            <th>
+                phone
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model.OrderBy(u => u.Id_user))
+        {
+            <tr>
+                <td>@obj.email</td>
+                <td>@obj.phone</td>
+            </tr>
+        }
+    </tbody>
+</table>

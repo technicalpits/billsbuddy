@@ -1,0 +1,61 @@
+﻿@model List<Amount_target>
+
+<h1>User List</h1>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                Grocery
+            </th>
+            <th>
+                Emergency money
+            </th>
+            <th>
+                Eat Outside money
+            </th>
+            <th>
+                House
+            </th>
+            <th>
+                Donation
+            </th>
+            <th>
+                Petrol
+            </th>
+            <th>
+                Utility
+            </th>
+            <th>
+                Car
+            </th>
+            <th>
+                Saving
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var latestObj = Model.OrderByDescending(u => u.Id_amt_target).FirstOrDefault();
+        }
+
+        @if (latestObj != null)
+        {
+            <tr>
+                <td>@latestObj.grocery</td>
+                <td>@latestObj.emergency_money</td>
+                <td>@latestObj.eat_outside</td>
+                <td>@latestObj.house</td>
+                <td>@latestObj.donation</td>
+                <td>@latestObj.petrol</td>
+                <td>@latestObj.utility</td>
+                <td>@latestObj.car</td>
+                <td>@latestObj.saving</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="col-6 col-md-3">
+                    <a asp-controller="AmountEnterForm" asp-action="Index" class="btn btn-outline-primary border form-control">
+                        Enter amount spend
+                    </a>
+                </div>

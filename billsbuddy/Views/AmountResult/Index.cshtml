@@ -1,0 +1,200 @@
+﻿@model List<Amount_result>
+
+<h1>User List</h1>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                Grocery
+            </th>
+            <th>
+                Emergency money
+            </th>
+            <th>
+                Eat Outside money
+            </th>
+            <th>
+                House
+            </th>
+            <th>
+                Donation
+            </th>
+            <th>
+                Petrol
+            </th>
+            <th>
+                Utility
+            </th>
+            <th>
+                Car
+            </th>
+            <th>
+                Saving
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var latestObj = Model.OrderByDescending(u => u.Id_amt_result).FirstOrDefault();
+        }
+
+        @if (latestObj != null)
+        {
+            <tr>
+                <td>@latestObj.grocery</td>
+                <td>@latestObj.emergency_money</td>
+                <td>@latestObj.eat_outside</td>
+                <td>@latestObj.house</td>
+                <td>@latestObj.donation</td>
+                <td>@latestObj.petrol</td>
+                <td>@latestObj.utility</td>
+                <td>@latestObj.car</td>
+                <td>@latestObj.saving</td>
+            </tr>
+        }
+        <tr>
+            <td>
+                @{
+                    if (latestObj.grocery < 1)
+                    {
+                        <text>You overspending RM @latestObj.grocery</text>
+                    }
+                    else if (latestObj.grocery == 0)
+                    {
+                        <text>Congratulations! You've followed the budget.</text>
+                    }
+                    else
+                    {
+                        <text>You have extra money now.</text>
+                    }
+                }
+            </td>
+            <td>
+                @{
+                    if (latestObj.emergency_money < 1)
+                    {
+                        <text>You overspending RM @latestObj.emergency_money</text>
+                    }
+                    else if (latestObj.emergency_money == 0)
+                    {
+                        <text>Congratulations! You've followed the budget.</text>
+                    }
+                    else
+                    {
+                        <text>You have extra money now.</text>
+                    }
+                }
+            </td>
+            <td>@{
+                if (latestObj.eat_outside < 1)
+                {
+                <text>You overspending RM @latestObj.eat_outside</text>
+                }
+                else if (latestObj.eat_outside == 0)
+                {
+                <text>Congratulations! You've followed the budget.</text>
+                }
+                else
+                {
+                <text>You have extra money now.</text>
+                }
+                }
+            </td>
+            <td>@{
+                if (latestObj.house < 1)
+                {
+                <text>You overspending RM @latestObj.emergency_money</text>
+                }
+                else if (latestObj.house == 0)
+                {
+                <text>Congratulations! You've followed the budget.</text>
+                }
+                else
+                {
+                <text>You have extra money now.</text>
+                }
+                }
+            </td>
+            <td>@{
+                if (latestObj.donation < 1)
+                {
+                <text>You overspending RM @latestObj.emergency_money</text>
+                }
+                else if (latestObj.donation == 0)
+                {
+                <text>Congratulations! You've followed the budget.</text>
+                }
+                else
+                {
+                <text>You have extra money now.</text>
+                }
+                }
+            </td>
+            <td>@{
+                if (latestObj.petrol < 1)
+                {
+                <text>You overspending RM @latestObj.emergency_money</text>
+                }
+                else if (latestObj.petrol == 0)
+                {
+                <text>Congratulations! You've followed the budget.</text>
+                }
+                else
+                {
+                <text>You have extra money now.</text>
+                }
+                }
+            </td>
+            <td>@{
+                if (latestObj.utility < 1)
+                {
+                <text>You overspending RM @latestObj.emergency_money</text>
+                }
+                else if (latestObj.utility == 0)
+                {
+                <text>Congratulations! You've followed the budget.</text>
+                }
+                else
+                {
+                <text>You have extra money now.</text>
+                }
+                }
+            </td>
+            <td>@{
+                if (latestObj.car < 1)
+                {
+                <text>You overspending RM @latestObj.emergency_money</text>
+                }
+                else if (latestObj.car == 0)
+                {
+                <text>Congratulations! You've followed the budget.</text>
+                }
+                else
+                {
+                <text>You have extra money now.</text>
+                }
+                }
+            </td>
+            <td>@{
+                if (latestObj.saving < 1)
+                {
+                <text>You overspending RM @latestObj.emergency_money</text>
+                }
+                else if (latestObj.saving == 0)
+                {
+                <text>Congratulations! You've followed the budget.</text>
+                }
+                else
+                {
+                <text>You have extra money now.</text>
+                }
+                }
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="col-6 col-md-3">
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary border form-control">
+        Enter new salary
+    </a>
+</div>

@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@* @model Net_salary *@
+@model billsbuddy.Models.Net_salary
+
+<div class="text-center">
+    <img style="width: 30%; height: 30%" src="images/pages/insert-salary.png" />
+    <h1 class="display-4">Enter Salary</h1>
+
+    <form method="post" class="row">
+        <div class="border p-3">
+            @* <div asp-validation-summary="None"></div> *@
+            <div class="form-floating py-2 col-12">
+                <input asp-for="amount" class="form-control border-0 shadow" />
+                @* <label asp-for="amount" class="ms-2"></label> *@
+                <span asp-validation-for="amount" class="text-danger"></span>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="Id_user" class="form-control border-0 shadow" value="1" hidden/>
+                @* <label asp-for="amount" class="ms-2"></label> *@
+                @* <span asp-validation-for="amount" class="text-danger"></span> *@
+            </div>
+        </div>
+        <div class="row pt-2 ">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-primary form-control">Calculate</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+

@@ -1,0 +1,64 @@
+﻿
+@model billsbuddy.Models.Amount_enter
+
+<div class="text-center">
+    @* <img style="width: 30%; height: 30%" src="images/pages/insert-salary.png" /> *@
+    <h1 class="display-4">Enter Amount Spend</h1>
+
+    <form method="post" class="row">
+        <div class="border p-3">
+            <div class="form-floating py-2 col-12">
+                <input asp-for="grocery" class="form-control border-0 shadow" />
+                <label asp-for="grocery" class="ms-2"></label>
+                <span asp-validation-for="grocery" class="text-danger"></span>
+            </div><div class="form-floating py-2 col-12">
+                <input asp-for="emergency_money" class="form-control border-0 shadow" />
+                <label asp-for="emergency_money" class="ms-2"></label>
+                <span asp-validation-for="emergency_money" class="text-danger"></span>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="eat_outside" class="form-control border-0 shadow" />
+                <label asp-for="eat_outside" class="ms-2"></label>
+                <span asp-validation-for="eat_outside" class="text-danger"></span>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="house" class="form-control border-0 shadow" />
+                <label asp-for="house" class="ms-2"></label>
+                <span asp-validation-for="house" class="text-danger"></span>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="donation" class="form-control border-0 shadow" />
+                <label asp-for="donation" class="ms-2"></label>
+                <span asp-validation-for="donation" class="text-danger"></span>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="petrol" class="form-control border-0 shadow" />
+                <label asp-for="petrol" class="ms-2"></label>
+                <span asp-validation-for="petrol" class="text-danger"></span>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="utility" class="form-control border-0 shadow" />
+                <label asp-for="utility" class="ms-2"></label>
+                <span asp-validation-for="utility" class="text-danger"></span>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="car" class="form-control border-0 shadow" />
+                <label asp-for="car" class="ms-2"></label>
+                <span asp-validation-for="car" class="text-danger"></span>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="saving" class="form-control border-0 shadow" />
+                <label asp-for="saving" class="ms-2"></label>
+                <span asp-validation-for="saving" class="text-danger"></span>
+            </div>
+            <div class="form-floating py-2 col-12">
+                <input asp-for="Id_user" class="form-control border-0 shadow" value="1" hidden />
+            </div>
+        </div>
+        <div class="row pt-2 ">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-primary form-control">Calculate</button>
+            </div>
+        </div>
+    </form>
+</div>
