@@ -4,6 +4,11 @@ using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+{
+    EnvironmentName = Environments.Staging
+});
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
