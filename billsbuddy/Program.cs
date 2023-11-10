@@ -6,7 +6,7 @@ using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
-    EnvironmentName = Environments.Staging
+    EnvironmentName = Environments.Development
 });
 
 // Add services to the container.
