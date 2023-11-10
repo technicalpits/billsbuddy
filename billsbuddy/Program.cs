@@ -2,7 +2,7 @@ using billsbuddy.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
 
-var builder = WebApplication.CreateBuilder(args);
+//var builder = WebApplication.CreateBuilder(args);
 
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
