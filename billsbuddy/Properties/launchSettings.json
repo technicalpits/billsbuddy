@@ -14,7 +14,7 @@
       "launchBrowser": false,
       "applicationUrl": "https://billsbuddy.azurewebsites.net/",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Production"
       }
     },
     "https": {
