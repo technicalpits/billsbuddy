@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Configuration;
 
 //var builder = WebApplication.CreateBuilder(args);
-
+//enter class builder for web app
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
     EnvironmentName = Environments.Development
